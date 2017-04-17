@@ -11,3 +11,13 @@ function getDatabase() {
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
     ]);
 }
+
+/**
+ * ログインしていなかったらログインページで移動する
+ */
+function redirectToLoginPageIfNotLoggedIn() {
+    if (!isset($_SESSION['user_id'])) {
+        header('Location: /login.php');
+        exit;
+    }
+}

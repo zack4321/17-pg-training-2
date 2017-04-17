@@ -2,6 +2,9 @@
 require_once 'functions.php';
 // お題一覧ページ
 
+session_start();
+redirectToLoginPageIfNotLoggedIn();
+
 $database = getDatabase();
 
 // お題一覧を取得
@@ -24,6 +27,11 @@ foreach ($questions as $i => $question) {
 ?>
 
 <link rel="stylesheet" href="/css/style.css">
+
+<div>
+    ようこそ[<?= $_SESSION['user_name'] ?>]さん
+    <a href="/logout.php">ログアウト</a>
+</div>
 
 <div>お題一覧</div>
 <?php foreach($questions as $question): ?>
