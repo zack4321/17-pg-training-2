@@ -25,7 +25,15 @@ foreach ($toots as $i => $toot) {
 
 ?>
 
+<form enctype="multipart/form-data" method="post" action="/submit_toot.php">
+    <input type="file" name="image">
+    <textarea name="text" placeholder="今なにしてる？" required></textarea>
+    <input type="submit" value="トゥート!">
+</form>
+
+<div>ホーム</div>
 <?php foreach($toots as $toot) { ?>
+
     <a href="toot.php?id=<?= $toot['id'] ?>">
         <div class="question-item">
             <div><?= $toot['user']['name'] ?></div>
