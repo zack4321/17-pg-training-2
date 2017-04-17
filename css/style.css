@@ -1,0 +1,17 @@
+div { box-sizing: border-box; }
+a { text-decoration: none; }
+
+/* お題 */
+.question-item {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #000000;
+  text-align: center;
+  vertical-align: top;
+}
+.question-item img {
+  width: 200px;
+}
