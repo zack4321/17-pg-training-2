@@ -30,12 +30,17 @@ foreach ($toots as $i => $toot) {
 
 <div class="wrapper">
 
-    <div class="container">
-        <div><?= $user_name ?></div>
+    <div class="container myself-container">
+        <div class="myself">
+            <div class="user-icon"></div>
+            <div class="user-name"><?= $user_name ?></div>
+        </div>
         <form enctype="multipart/form-data" method="post" action="/post_toot.php">
-            <input type="file" name="image">
             <textarea name="text" placeholder="今なにしてる？" required></textarea>
-            <input type="submit" value="トゥート!">
+            <input type="file" name="image">
+            <div class="toot-button-container">
+                <input type="submit" class="toot-button" value="トゥート!">
+            </div>
         </form>
     </div>
 
