@@ -1,10 +1,11 @@
 <?php
+require_once 'functions.php';
 // お題ページ
 
 $id = $_GET['id'];
 
-$pdo = new PDO('mysql:host=localhost;port=8889;dbname=database', 'root', 'root');
-$question = $pdo->query("
+$database = getDatabase();
+$question = $database->query("
     SELECT *
     FROM `question`
     WHERE `id` = {$id}

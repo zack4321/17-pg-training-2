@@ -1,10 +1,9 @@
 <?php
+require_once 'functions.php';
 // お題一覧ページ
 
-$pdo = new PDO('mysql:host=localhost;port=8889;dbname=database', 'root', 'root', [
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-]);
-$questions = $pdo->query("
+$database = getDatabase();
+$questions = $database->query("
     SELECT *
     FROM `question`
     ORDER BY `created_at` DESC
