@@ -19,5 +19,5 @@ if ($user === false) {
 } else {
     $_SESSION['user_id'] = $user_id;
     $_SESSION['user_name'] = $user['name'];
-    header('Location: /question_list.php');
+    header('Location: /');
 }

@@ -5,8 +5,9 @@ require_once 'functions.php';
 session_start();
 redirectToLoginPageIfNotLoggedIn();
 
-$database = getDatabase();
+$user_name = $_SESSION['user_name'];
 
+$database = getDatabase();
 $toots = $database->query("
     SELECT *
     FROM `toot`
@@ -25,6 +26,7 @@ foreach ($toots as $i => $toot) {
 
 ?>
 
+<div><?= $user_name ?></div>
 <form enctype="multipart/form-data" method="post" action="/submit_toot.php">
     <input type="file" name="image">
     <textarea name="text" placeholder="今なにしてる？" required></textarea>
