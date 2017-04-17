@@ -27,7 +27,7 @@ foreach ($toots as $i => $toot) {
 ?>
 
 <div><?= $user_name ?></div>
-<form enctype="multipart/form-data" method="post" action="/submit_toot.php">
+<form enctype="multipart/form-data" method="post" action="/post_toot.php">
     <input type="file" name="image">
     <textarea name="text" placeholder="今なにしてる？" required></textarea>
     <input type="submit" value="トゥート!">
