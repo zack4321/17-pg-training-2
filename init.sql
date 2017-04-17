@@ -21,7 +21,7 @@ CREATE TABLE `database`.`toot`(
 
 INSERT INTO `database`.`user` (`name`) VALUES
   ('sossii'),
-  ('soshio');
+  ('そしお');
 
 INSERT INTO `database`.`toot` (`user_id`, `text`,`image_file_name`, `created_at`) VALUES
   (1, 'わっしょい', '00000000000000000000000000000000.png', '2017-04-13 00:00:00'),

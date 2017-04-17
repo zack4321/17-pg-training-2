@@ -1,34 +1,71 @@
+* {
+  line-height: 1.0;
+  font-family: 'Roboto, sans-serif';
+}
 div { box-sizing: border-box; }
 a { text-decoration: none; }
 
-/* お題 */
-.question-item {
-  display: inline-block;
-  width: 300px;
-  height: 300px;
-  margin: 10px;
-  padding: 20px;
-  border: 1px solid #000000;
-  text-align: center;
-  vertical-align: top;
+body {
+  height: 100%;
+  background-color: #191B22;
+  color: #FFFFFF;
+  margin: 0;
 }
-.question-item img {
-  width: 200px;
+.wrapper {
+  display: flex;
+  overflow: hidden;
+  height: 100%;
+}
+.container {
+  width: 285px;
+  height: calc(100% - 20px);
+  margin: 10px;
 }
 
-.answer-item {
-  width: 300px;
-  height: 300px;
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #000000;
-  text-align: center;
+.toot-container {
+  background-color: #282c37;
 }
-.answer-item img {
-  width: 200px;
-}
-.answer-item .text {
+.toot-container .label {
+  width: 100%;
+  padding: 15px;
+  background: #313543;
+  border-bottom: 1px solid #294A68;
   font-size: 16px;
-  font-weight: bold;
-  color: #000000;
+  color: #ffffff;
 }
+.toot-container .contents {
+  height: calc(100% - 47px);
+  overflow-y: scroll;
+}
+
+.toot-item {
+  display: flex;
+  padding: 8px 10px;
+  border-bottom: 1px solid #393f4f;
+  background-color: #282c37;
+  cursor: default;
+}
+.toot-item .right-container {
+  padding-left: 10px;
+}
+.toot-item .user-icon {
+  width: 48px;
+  height: 48px;
+  background: #888888;
+  border-radius: 5px;
+}
+.toot-item .user-name {
+  line-height: 18px;
+  font-size: 15px;
+  color: #FFFFFF;
+}
+.toot-item .text {
+  margin: 0;
+  line-height: 20px;
+  font-size: 15px;
+  color: #FFFFFF;
+}
+.toot-item img {
+  width: 100%;
+}
+
