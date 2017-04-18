@@ -23,10 +23,23 @@ body {
   margin-left: 0;
 }
 
+.icon-home {
+  background-image: url('/img/home.png');
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: 20px center;
+}
+.icon-asterisk {
+  background-image: url('/img/asterisk.png');
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: 20px center;
+}
+
 .user-icon {
   width: 48px;
   height: 48px;
-  background: #888888;
+  background-color: #D9E1E8;
   border-radius: 5px;
 }
 
@@ -45,6 +58,7 @@ body {
 }
 .myself .user-name {
   padding-left: 8px;
+  line-height: 20px;
   font-size: 13px;
   font-weight: bold;
 }
@@ -62,8 +76,8 @@ input[type='file'] {
   background-color: #2588D0;
   line-height: 36px;
   font-size: 14px;
-  font-weight: bold;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 
@@ -82,8 +96,8 @@ textarea {
 .toot-container .label {
   width: 100%;
   padding: 15px;
-  background: #313543;
-  border-bottom: 1px solid #294A68;
+  padding-left: 43px;
+  background-color: #313543;
   font-size: 16px;
   color: #ffffff;
 }
@@ -117,3 +131,9 @@ textarea {
   width: 100%;
 }
 
+.contents p {
+  padding: 10px;
+  line-height: 17px;
+  font-size: 13px;
+  color: #d9e1e8;
+}

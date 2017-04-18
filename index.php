@@ -26,48 +26,66 @@ foreach ($toots as $i => $toot) {
 
 ?>
 
-<link rel="stylesheet" href="/css/style.css">
 
-<div class="wrapper">
+<html>
+<head>
+    <title>Yastodon(ヤストドン)</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
 
-    <div class="container myself-container">
-        <div class="myself">
-            <div class="user-icon"></div>
-            <div class="user-name"><?= $user_name ?></div>
-        </div>
-        <form enctype="multipart/form-data" method="post" action="/post_toot.php">
-            <textarea name="text" placeholder="今なにしてる？" required></textarea>
-            <input type="file" name="image">
-            <div class="toot-button-container">
-                <input type="submit" class="toot-button" value="トゥート!">
+    <div class="wrapper">
+
+        <div class="container myself-container">
+            <div class="myself">
+                <div class="user-icon"></div>
+                <div class="user-name"><?= $user_name ?></div>
             </div>
-        </form>
-    </div>
-
-    <div class="container toot-container">
-        <div class="label">ホーム</div>
-
-        <div class="contents">
-            <?php foreach($toots as $toot) { ?>
-
-                <div class="toot-item">
-                    <div class="left-container">
-                        <div class="user-icon"></div>
-                    </div>
-                    <div class="right-container">
-                        <div class="user-name"><?= $toot['user']['name'] ?></div>
-                        <div class="text"><?= nl2br($toot['text']) ?></div>
-
-                        <?php if ($toot['image_file_name'] !== '') { ?>
-                            <img src="/image/<?= $toot['image_file_name'] ?>" width="300px">
-                        <?php } ?>
-
-                    </div>
+            <form enctype="multipart/form-data" method="post" action="/post_toot.php">
+                <textarea name="text" placeholder="今なにしてる？" required></textarea>
+                <input type="file" name="image">
+                <div class="toot-button-container">
+                    <input type="submit" class="toot-button" value="トゥート!">
                 </div>
-
-            <?php } ?>
+            </form>
         </div>
+
+        <div class="container toot-container">
+            <div class="label icon-home">ホーム</div>
+
+            <div class="contents">
+                <?php foreach($toots as $toot) { ?>
+
+                    <div class="toot-item">
+                        <div class="left-container">
+                            <div class="user-icon"></div>
+                        </div>
+                        <div class="right-container">
+                            <div class="user-name"><?= $toot['user']['name'] ?></div>
+                            <div class="text"><?= nl2br($toot['text']) ?></div>
+
+                            <?php if ($toot['image_file_name'] !== '') { ?>
+                                <img src="/image/<?= $toot['image_file_name'] ?>" width="300px">
+                            <?php } ?>
+
+                        </div>
+                    </div>
+
+                <?php } ?>
+            </div>
+        </div>
+
+        <div class="container toot-container">
+            <div class="label icon-asterisk">スタート</div>
+            <div class="contents">
+                <p>
+                    Yastodonとは研修のために作られた教育用ソーシャル・ネットワーキング・サービスです。<br>
+                    あなただけの素敵なサービスをここから成長させていってください。
+                </p>
+            </div>
+        </div>
+
     </div>
 
-</div>
-
+</body>
+</html>
