@@ -7,6 +7,6 @@
 
 <div>ログイン</div>
 <form method="post" action="/post_login.php">
-    <input name="user_id" required>
+    <input name="login_name" required>
     <input type="submit" value="ログイン">
 </form>

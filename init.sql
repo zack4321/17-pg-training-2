@@ -6,7 +6,8 @@ CREATE DATABASE `database`;
 
 CREATE TABLE `database`.`user`(
   `id` int AUTO_INCREMENT,
-  `name` varchar(100),
+  `login_name` varchar(100),
+  `display_name` varchar(100),
   PRIMARY KEY (`id`)
 );
 
@@ -19,9 +20,9 @@ CREATE TABLE `database`.`toot`(
   PRIMARY KEY (`id`)
 );
 
-INSERT INTO `database`.`user` (`name`) VALUES
-  ('sossii'),
-  ('そしお');
+INSERT INTO `database`.`user` (`login_name`, `display_name`) VALUES
+  ('sossii', 'そっしー'),
+  ('numazu', 'ぬまづ');
 
 INSERT INTO `database`.`toot` (`user_id`, `text`,`image_file_name`, `created_at`) VALUES
   (1, 'わっしょい', '00000000000000000000000000000000.png', '2017-04-13 00:00:00'),

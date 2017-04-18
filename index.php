@@ -5,7 +5,7 @@ require_once 'functions.php';
 session_start();
 redirectToLoginPageIfNotLoggedIn();
 
-$user_name = $_SESSION['user_name'];
+$user_login_name = $_SESSION['user_login_name'];
 
 $database = getDatabase();
 $toots = $database->query("
@@ -39,7 +39,7 @@ foreach ($toots as $i => $toot) {
         <div class="container myself-container">
             <div class="myself">
                 <div class="user-icon"></div>
-                <div class="user-name"><?= $user_name ?></div>
+                <div class="user-name"><?= $user_login_name ?></div>
             </div>
             <form enctype="multipart/form-data" method="post" action="/post_toot.php">
                 <textarea name="text" placeholder="今なにしてる？" required></textarea>
@@ -61,7 +61,10 @@ foreach ($toots as $i => $toot) {
                             <div class="user-icon"></div>
                         </div>
                         <div class="right-container">
-                            <div class="user-name"><?= $toot['user']['name'] ?></div>
+                            <div class="user-name">
+                                <?= $toot['user']['display_name'] ?>
+                                <span class="login-name">@<?= $toot['user']['login_name'] ?></span>
+                            </div>
                             <div class="text"><?= nl2br($toot['text']) ?></div>
 
                             <?php if ($toot['image_file_name'] !== '') { ?>
