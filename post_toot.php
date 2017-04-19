@@ -13,7 +13,7 @@ if ($_FILES['image']['name'] === '') {
     $image_file_name = '';
 } else {
     $image_file_name = md5(mt_rand()) . '.' . pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
-    $upload_path = dirname(__FILE__) . '/image/' . $image_file_name;
+    $upload_path = dirname(__FILE__) . '/uploaded_image/' . $image_file_name;
     move_uploaded_file($_FILES['image']['tmp_name'], $upload_path);
 }
 

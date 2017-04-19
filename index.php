@@ -68,7 +68,7 @@ foreach ($toots as $i => $toot) {
                             <div class="text"><?= nl2br($toot['text']) ?></div>
 
                             <?php if ($toot['image_file_name'] !== '') { ?>
-                                <img src="/image/<?= $toot['image_file_name'] ?>" width="300px">
+                                <img src="/uploaded_image/<?= $toot['image_file_name'] ?>" width="300px">
                             <?php } ?>
 
                         </div>
