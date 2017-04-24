@@ -8,22 +8,6 @@ redirectToLoginPageIfNotLoggedIn();
 $user_login_name = $_SESSION['user_login_name'];
 
 $database = getDatabase();
-$toots = $database->query("
-    SELECT *
-    FROM `toot`
-    ORDER BY `created_at` DESC
-")->fetchAll(PDO::FETCH_ASSOC);
-
-foreach ($toots as $i => $toot) {
-    $user = $database->query("
-        SELECT *
-        FROM `user`
-        WHERE `id` = {$toot['user_id']}
-    ")->fetch(PDO::FETCH_ASSOC);
-
-    $toots[$i]['user'] = $user;
-}
-
 ?>
 
 
@@ -52,33 +36,9 @@ foreach ($toots as $i => $toot) {
 
         <div class="container toot-container">
             <div class="label icon-home">ホーム</div>
-
-            <div class="contents">
-                <?php foreach($toots as $toot) { ?>
-
-                    <div class="toot-item">
-                        <div class="left-container">
-                            <div class="user-icon"></div>
-                        </div>
-                        <div class="right-container">
-                            <div class="user-name">
-                                <?= $toot['user']['display_name'] ?>
-                                <span class="login-name">@<?= $toot['user']['login_name'] ?></span>
-                            </div>
-                            <div class="text"><?= nl2br($toot['text']) ?></div>
-
-                            <?php if ($toot['image_file_name'] !== '') { ?>
-                                <img src="/uploaded_image/<?= $toot['image_file_name'] ?>" width="300px">
-                            <?php } ?>
-
-                        </div>
-                    </div>
-
-                <?php } ?>
-            </div>
         </div>
 
-        <div class="container toot-container">
+        <div class="container about-container">
             <div class="label icon-asterisk">スタート</div>
             <div class="contents">
                 <p>
@@ -87,7 +47,6 @@ foreach ($toots as $i => $toot) {
                 </p>
             </div>
         </div>
-
     </div>
 
 </body>

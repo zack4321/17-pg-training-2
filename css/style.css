@@ -91,7 +91,7 @@ textarea {
 }
 
 .toot-container {
-  background-color: #282c37;
+  background-color: #FFFFFF;
 }
 .toot-container .label {
   width: 100%;
@@ -133,6 +133,24 @@ textarea {
 }
 .toot-item img {
   width: 100%;
+}
+
+.about-container {
+  background-color: #282c37;
+}
+
+.about-container .label {
+  width: 100%;
+  padding: 15px;
+  padding-left: 43px;
+  background-color: #313543;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.about-container .contents {
+  height: calc(100% - 47px);
+  overflow-y: scroll;
 }
 
 .contents p {
