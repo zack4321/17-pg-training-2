@@ -25,6 +25,7 @@ cd ~/17-pg-training
 /Applications/MAMP/Library/bin/mysql -P 8889 -u root -proot < ~/17-pg-training/init.sql
 
 # シンボリックリンクを貼る
+rm -r /Applications/MAMP/htdocs
 ln -s ~/17-pg-training /Applications/MAMP/htdocs
 
 # 開いてみる
