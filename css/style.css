@@ -2,8 +2,14 @@
   line-height: 1.0;
   font-family: 'Roboto', sans-serif;
 }
-div { box-sizing: border-box; }
-a { text-decoration: none; }
+
+div {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
 
 body {
   height: 100%;
@@ -11,29 +17,18 @@ body {
   color: #FFFFFF;
   margin: 0;
 }
+
 .wrapper {
   display: flex;
   overflow: hidden;
   height: 100%;
 }
+
 .container {
   width: 285px;
   height: calc(100% - 20px);
   margin: 10px;
   margin-left: 0;
-}
-
-.icon-home {
-  background-image: url('/img/home.png');
-  background-size: 15px;
-  background-repeat: no-repeat;
-  background-position: 20px center;
-}
-.icon-asterisk {
-  background-image: url('/img/asterisk.png');
-  background-size: 15px;
-  background-repeat: no-repeat;
-  background-position: 20px center;
 }
 
 .user-icon {
@@ -52,22 +47,27 @@ body {
 .myself {
   display: flex;
 }
+
 .myself .user-icon {
   width: 40px;
   height: 40px;
 }
+
 .myself .user-name {
   padding-left: 8px;
   line-height: 20px;
   font-size: 13px;
   font-weight: bold;
 }
+
 input[type='file'] {
   margin: 10px 0;
 }
+
 .toot-button-container {
   text-align: right;
 }
+
 .toot-button {
   height: 36px;
   padding: 0px 16px;
@@ -79,7 +79,6 @@ input[type='file'] {
   color: #FFFFFF;
   cursor: pointer;
 }
-
 
 textarea {
   width: 100%;
@@ -93,14 +92,7 @@ textarea {
 .toot-container {
   background-color: #FFFFFF;
 }
-.toot-container .label {
-  width: 100%;
-  padding: 15px;
-  padding-left: 43px;
-  background-color: #313543;
-  font-size: 16px;
-  color: #ffffff;
-}
+
 .toot-container .contents {
   height: calc(100% - 47px);
   overflow-y: scroll;
@@ -110,13 +102,18 @@ textarea {
   background-color: #282c37;
 }
 
-.about-container .label {
+.label {
   width: 100%;
   padding: 15px;
-  padding-left: 43px;
   background-color: #313543;
   font-size: 16px;
   color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.label .label-icon{
+  margin-right: 10px;
 }
 
 .about-container .contents {

@@ -35,11 +35,11 @@ $database = getDatabase();
         </div>
 
         <div class="container toot-container">
-            <div class="label icon-home">ホーム</div>
+            <div class="label icon-home"><img class="label-icon" src="/img/home.png" width="15" alt="Home - ">ホーム</div>
         </div>
 
         <div class="container about-container">
-            <div class="label icon-asterisk">スタート</div>
+            <div class="label icon-asterisk"><img class="label-icon" src="/img/asterisk.png" width="15" alt="Start - ">スタート</div>
             <div class="contents">
                 <p>
                     Yastodonとは研修のために作られた教育用ソーシャル・ネットワーキング・サービスです。<br>
