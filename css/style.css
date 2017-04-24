@@ -106,35 +106,6 @@ textarea {
   overflow-y: scroll;
 }
 
-.toot-item {
-  display: flex;
-  padding: 8px 10px;
-  border-bottom: 1px solid #393f4f;
-  background-color: #282c37;
-  cursor: default;
-}
-.toot-item .right-container {
-  padding-left: 10px;
-}
-.toot-item .user-name {
-  line-height: 18px;
-  font-size: 15px;
-  color: #FFFFFF;
-}
-.toot-item .login-name {
-  font-size: 14px;
-  color: #606984;
-}
-.toot-item .text {
-  margin: 0;
-  line-height: 20px;
-  font-size: 15px;
-  color: #FFFFFF;
-}
-.toot-item img {
-  width: 100%;
-}
-
 .about-container {
   background-color: #282c37;
 }
