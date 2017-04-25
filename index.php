@@ -9,3 +9,5 @@ $user_login_name = $_SESSION['user_login_name'];
 
 $database = getDatabase();
 ?>
+
+<!-- 下にindex.htmlをコピペして、index.htmlを消そう！ -->
